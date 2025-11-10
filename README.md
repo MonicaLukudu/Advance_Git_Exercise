@@ -26,3 +26,4 @@
 ### git log --oneline <!--to check the changes made-->
 
 ## 6. Dropping a commit
+### git rebase -i <!--in the rebase editor choose one of the commands that is "drop" or "d" to remove the unnecessary commits from the tracking history-->
