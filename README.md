@@ -12,3 +12,11 @@
 ## 3. Keeping History Tidy - Squashing Commits
 ### git log --oneline
 ### git rebase -i HEAD~4 <!--this is where you can access the commits that you displayed from the above command and press i to edit the commit you want to edit (that's by replacing the pick keyword with squash then save and exit (you can save by clicking on "Esc", colon, then type "wq" and press "Enter")) modify the commit as you please then save and exit-->
+
+## 4. 
+### git rebase -i HEAD~4
+### git log --oneline
+### git reset HEAD^ <!--You can use 'git reset HEAD~' OR 'git reset ID'-->
+### git rebase --continue <!--this is to show that it is completely rebased and updated-->
+### git add fileName <!--this is to stage the files separately-->
+### git commit -m "" <!--this is to commit the files separately-->
