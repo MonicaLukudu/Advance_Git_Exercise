@@ -1,4 +1,4 @@
-# Advanced git commands
+# Advanced git commands (Part 1)
 ## 1. Missing file fix (using amend)
 <!-- this commands are used after it being staged(a point before the commit using "git add #filename" )-->
 ### git commit --amend -m "" <!-- this is to commit the missing file to the last commit -->
@@ -30,6 +30,7 @@
 
 ## 7. Reordering commits
 ### git rebase -i <!--all you need to do is cut and paste the commit to the dersired place-->
+<!--although this can be confilcting because you may end up having marging conflict that you will have to fix manually-->
 
 ## 8. Cherry-picking commit
 ### git switch -c ft/branch
@@ -45,3 +46,33 @@
 
 ## 10. Understanding Reflogs (bouns)
 ### git reflog <!--The git reflog command, on the other hand, tracks the local history of your Git operations (like branch switches, resets, and merges), not the commits themselves. It acts as a safety net, allowing you to recover lost commits or navigate back to previous states of your repository, even after destructive actions like a hard reset.-->
+
+# BRanching Basics (Part 2)
+## 1. Feature Branch Creation
+### git switch -c ft/new/new-feature
+
+## 2. Working on a new feature
+### touch feature.txt
+### git add feature.txt
+### git commit -m "Implemented core functionality for new feature"
+
+## 3. Switching Back and making more changes
+### git switch main
+### tocuh readme.txt
+### git add readme.txt
+### git commit -m "Update project readme"
+
+## 4. Local vs. Remote Branches
+### Remote branches are references on your local machine that represent the state of branches stored on a shared Git hosting platform, such as GitHub. These branches, typically named like origin/main, are read-only markers that allow developers to coordinate their work. To keep your local branches synchronized with the remote, you use $\mathbf{git \ push}$ to upload your committed changes to the remote repository, and $\mathbf{git \ pull}$ to automatically fetch and integrate changes made by others from the remote repository into your local branch. This push-and-pull mechanism ensures that all collaborators are working from the latest, unified version of the project.
+
+## 5. Deleting a branch
+### git branch <!--this is to check the branches availablity and the current branch it is in.-->
+### git branch -D 
+
+
+## NOTE
+### Lowercase 'd': for Safe Delete. The lowercase -d is an alias for --delete.
+### It will only delete the local branch if its commits have been fully merged into the branch you are currently on.
+
+### Uppercase 'D': it Force Delete. The uppercase -D is an alias for --delete --force.
+### It forces the deletion of the local branch regardless of its merged status.
