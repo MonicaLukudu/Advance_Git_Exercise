@@ -76,3 +76,12 @@
 
 ### Uppercase 'D': it Force Delete. The uppercase -D is an alias for --delete --force.
 ### It forces the deletion of the local branch regardless of its merged status.
+
+## 6. Creating a Branch from a Commit
+### git checkout -b ft/new-branch-from-commit HEAD~2 <!--this is to create a new branch and move the commits of your desire to that branch and move their-->
+
+## 7. Branch Merging
+### git checkout main
+### git merge ft/new-branch-from-commit
+### in case you get a merge conflict, manually fix it.
+
