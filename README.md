@@ -85,3 +85,10 @@
 ### git merge ft/new-branch-from-commit
 ### in case you get a merge conflict, manually fix it.
 
+## 8. Branch Rebasing
+### git checkout ft/new-branch-from-commit
+### git rebase main
+### git add <conflicted-file-name>
+### git rebase --continue
+### git checkout main
+### git merge ft/new-branch-from-commit
