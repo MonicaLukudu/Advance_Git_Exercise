@@ -92,3 +92,6 @@
 ### git rebase --continue
 ### git checkout main
 ### git merge ft/new-branch-from-commit
+
+## 9. Renaming a Branch
+### git branch -m ft/new-branch-from-commit ft/improved-branch-name <!--this changes the branch name from the current one to a new one-->
