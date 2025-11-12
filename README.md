@@ -95,3 +95,6 @@
 
 ## 9. Renaming a Branch
 ### git branch -m ft/new-branch-from-commit ft/improved-branch-name <!--this changes the branch name from the current one to a new one-->
+<!--'-M' a flag frequently seen in the mv command (move/rename) it is used to rename a branch, while '-m' is a short hand of a '-messge' that is used to commit a message. -->
+
+## 10. Checking Out Datched HEAD
