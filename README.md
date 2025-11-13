@@ -98,3 +98,46 @@
 <!--'-M' a flag frequently seen in the mv command (move/rename) it is used to rename a branch, while '-m' is a short hand of a '-messge' that is used to commit a message. -->
 
 ## 10. Checking Out Datched HEAD
+### git checkout <commit-hash> <!--this command help taking you back to the specific commit that was done by that time-->
+
+# Advanced Workflows PART 3
+## 1. Stashing Changes
+### git stash <!--this command temporarily saves youe staged and unstaged changes in the file, and then reverts your wirking directory to the state of the last commit-->
+
+## 2. Retrieving stashed changes
+### git stash pop <!--this command is used to remove the changes from the stash list-->
+
+## 3. Branch Merging Conflicts
+### To resolve merge confilcts manually through the text editor, click on the changes that is done and merge the comparison that is provided then click on the complete.
+
+## 4. Resolving ,erge conflicts with a merge tool
+### I case you don't have merge.tool configured in your laptop, use this command: git config --global merge.tool code
+### git merge <branch-name> <!--this is to merge the branch you want to merge. -->
+### git mergetool
+### File will be displced when you run the git mergetool command on the terminal:
+### *on the top-left this is the local file that you wnat to merge with, *on the top-middle this is the base file before any changes were made in both branches. *on the top-right this is the remote file that you want to merege with the file in the top-left * and the file on the botton is the one that is going to show the changes that need to be marged.
+### once you have identified the changes you need to edit, by remmoving the >>>> HEAD and all the other unnecessary lines and remove the line you want to replace the changes then click Shift Z a couple of times and quit the rest one by one then add and commit your work and you will automatically leave the mergetool editor.
+
+## 5. Understanding the DETACHED HEAD state
+### The "detached HEAD" state in Git is a valid, though unusual, state where the special pointer HEAD (which normally points to the tip of your current branch) is pointing directly to a specific commit.
+### In simple words, the detached HEAD state means you're in "view-only" mode and are not on a branch.
+
+## 6. Ignoring Files/Directories
+### the '.gitignore' file is a powerful file configaration file used to tell git which files and directories to intentionally ignore and not track in the repository.
+### to avoid the temporary files from being tracked, add /tmp in the file to ignore a directory anmed tmp located only in the root of the repository.
+
+## 7. Working with Tags
+### Git tag are like permenent, static bookmarks in your repositoryhistory. They are primarily used to marfk specific points as important, unlike branches, tags don't change or move once they've been created.
+### - To create a tag: 'git tag v1.0'(it will traget the last commit in the log) or 'git tag -a v1.0 -m "Initial release version"(this one here is for a commit that is staged)
+### - To checkout tag version: 'git checkout v1.0' ( this checks out commit pointed to by v1.0. but this only puts you in a detached HEAD state as you are not on the branch.) and to return: 'git checkout main'(To go back to active development, you must check out a branch)
+
+## 8. Listing and deleting Tags
+### To delete the Local Tag: 'git tag -d v1.0' and to delete the remote Tag: 'git push origin --delete v1.0'
+### - To list and view tags: 'git tag'(to list) and 'git show v1.0' (displays infomstion about the specific tag name provided.)
+
+## 9. Pushing Local Work to Remote Repositories
+### git push origin <branch-name> <!-- but before pushing make sure to pull to check out for any chancges in the remote repositories by using this command "git pull"-->
+### - To push tags[note the defult 'git push' command does not send the tags to the remote repository.]: 'git push origin v1.0'(pushes a single tag named v1.0 to the remote repository.) and 'git push origin --tags' (pushes all of your local tags to the remote repository.)
+
+## 10. Pulling Changes from REmote Repositories
+### using the 'git pull' command to pull the changes in the remote repository and resolve it manually or using the merge tool command 'git mergetool'.
